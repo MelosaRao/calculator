@@ -163,15 +163,17 @@ window.addEventListener('keydown', (e)=>{
     keyValue === '-' || 
     keyValue === 'x' ||
     keyValue === '/'){
+        if(operator||text2.innerText){
         calculate();
         operator=`${keyValue}`;
         operation();
-    }
+    }}
     else if(keyValue ==='*'){
+        if(operator||text2.innerText){
         calculate();
         operator= 'x';
         operation();
-    }
+    }}
 
 
 })
